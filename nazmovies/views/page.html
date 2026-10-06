@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{TITLE}} — {{SITE}}</title>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/style.css">
+<style>
+  body{padding-top:0}
+  .pg{max-width:860px;margin:0 auto;padding:40px 5vw 80px;min-height:78vh}
+  .pg-headbar{display:flex;align-items:center;gap:12px;padding:16px 5vw;border-bottom:1px solid var(--line);
+    position:sticky;top:0;background:rgba(11,11,15,.94);backdrop-filter:blur(12px);z-index:10}
+  .pg-headbar img{height:32px}
+  .pg-headbar .brand{font-size:1.3rem;font-weight:800;color:var(--red);letter-spacing:.05em;text-transform:uppercase}
+  .pg-headbar a.back{margin-inline-start:auto;color:var(--muted);font-weight:600;font-size:.9rem}
+  .pg-headbar a.back:hover{color:#fff}
+  .pg h1{font-size:clamp(1.5rem,3.5vw,2.1rem);margin-bottom:8px;padding-bottom:14px;border-bottom:2px solid var(--red);display:inline-block}
+  .pg-content{margin-top:22px;line-height:2;color:#d8d8e0;font-size:1rem}
+  .pg-content h3{color:#fff;margin:26px 0 10px;font-size:1.15rem}
+  .pg-content p{margin-bottom:12px}
+  .pg-content a{color:#ffd166}
+  .kw-chips{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 8px}
+  .kw-chip{background:rgba(229,9,20,.12);border:1px solid rgba(229,9,20,.4);color:#ffb3b8;
+    padding:7px 16px;border-radius:999px;font-size:.85rem;font-weight:600}
+  .kw-list{padding-inline-start:20px}
+  .kw-list li{margin-bottom:8px}
+  .kw-list a{color:#fff;font-weight:600}
+  .kw-list a:hover{color:var(--red)}
+  .kw-list small{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="pg-headbar">
+  <a href="/" style="display:flex;align-items:center;gap:10px">
+    <img src="{{LOGO}}" alt="" onerror="this.outerHTML='<span class=&quot;brand&quot;>{{SITE}}</span>'">
+  </a>
+  <a class="back" href="/">← الرئيسية</a>
+</div>
+<div class="pg">
+  <h1>{{TITLE}}</h1>
+  <div class="pg-content">{{CONTENT}}</div>
+</div>
+<footer>
+  <span class="f-brand">{{SITE}}</span>
+  <span class="spacer"></span>
+  <a href="/terms" style="margin-inline-end:16px">الشروط والأحكام</a>
+  <a href="/privacy" style="margin-inline-end:16px">الخصوصية</a>
+  <a href="/keywords">الكلمات المفتاحية</a>
+  <span class="spacer"></span>
+  <span>© {{YEAR}} {{SITE}}</span>
+</footer>
+</body>
+</html>
